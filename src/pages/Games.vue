@@ -1,12 +1,12 @@
 <template>
   <Layout>
-    <section class="pt-105 pb-100 bg-dark showcase_5">
+    <section class="pb-100 bg-dark showcase_5">
       <div class="container px-xl-0">
         <div class="row justify-content-center text-center color-white">
 
           <div class="col-xl-10">
             <h2 class="mb-10 small text-center">比賽結果</h2>
-            <div class="pt-40 px-60 pt-60 table-responsive-shadow bg-light">
+            <div class="pt-40 px-md-60 px-15 pt-60 table-responsive-shadow bg-light">
               <div class="table-responsive-xl">
                 <table class="table table-borderless table-striped m-0">
                   <thead>

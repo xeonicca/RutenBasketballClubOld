@@ -4,6 +4,7 @@
 import DefaultLayout from '~/layouts/Default.vue'
 import 'bootstrap/dist/css/bootstrap.css'
 import '~/assets/style.scss'
+// import $ from 'jquery'
 
 export default function (Vue, { router, head, isClient }) {
   // Set default layout as a global component
@@ -28,5 +29,7 @@ export default function (Vue, { router, head, isClient }) {
     rel: 'stylesheet',
     href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css'
   })
+
+  // head.script.push({ src: 'https://code.jquery.com/jquery-3.4.1.min.js' })
 }
 

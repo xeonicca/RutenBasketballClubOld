@@ -1,11 +1,11 @@
 <template>
   <Layout>
-    <section class="pt-105 pb-100 bg-dark showcase_5">
+    <section class="pb-100 bg-dark showcase_5">
       <div class="container px-xl-0">
         <div class="row justify-content-center text-center color-white">
           <div class="col-xl-6 col-lg-8">
-            <h2 class="small" data-aos-duration="600" data-aos="fade-down" data-aos-delay="0">媲美SBL的隊伍陣容</h2>
-            <div class="mt-25 mb-40 f-22 text-adaptive" data-aos-duration="600" data-aos="fade-down" data-aos-delay="300">
+            <h2>媲美SBL的隊伍陣容</h2>
+            <div class="mt-25 mb-40 f-22 text-adaptive">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis quibusdam consequuntur asperiores repudiandae nihil est eius eveniet itaque at natus.
             </div>
           </div>
