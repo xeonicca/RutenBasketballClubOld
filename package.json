@@ -7,13 +7,13 @@
     "explore": "gridsome explore"
   },
   "dependencies": {
-    "@gridsome/source-airtable": "^0.1.0",
+    "@gridsome/source-airtable": "^0.1.4",
     "bootstrap": "^4.4.1",
     "gridsome": "^0.6.0",
     "jquery": "^3.4.1",
     "node-sass": "^4.13.0",
     "sass-loader": "^8.0.0",
-    "style-resources-loader": "^1.3.3",
-    "serialize-javascript": "^2.1.1"
+    "serialize-javascript": "^2.1.1",
+    "style-resources-loader": "^1.3.3"
   }
 }

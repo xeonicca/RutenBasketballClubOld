@@ -9,33 +9,40 @@
   </Layout>
 </template>
 
-<!-- <page-query>
-  query Events {
-    events: allEvent (sort: { by: "startDate", order: ASC }){
+<page-query>
+  query Teams {
+    teams: allTeams(sort: { by: "name", order: ASC }) {
       edges {
         node{
           id
-          path
           name
-          startDate
-          endDate
-          excerpt
-          headerImage{
-            url
-          }
+          players
         }
       }
     }
   }
-</page-query> -->
+  query Players {
+    players: allPlayers {
+      edges {
+        node{
+          name
+          gender
+          skype
+          team
+          teamCaptain
+        }
+      }
+    }
+  }
+</page-query>
 
 <script>
 import Layout from '~/layouts/Default.vue'
-import EventCard from '~/components/EventCard.vue'
+// import EventCard from '~/components/EventCard.vue'
 export default {
   components: {
     Layout,
-    EventCard
+    // EventCard
   },
   data() {
     return {

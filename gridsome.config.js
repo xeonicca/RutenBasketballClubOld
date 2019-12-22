@@ -43,7 +43,7 @@ module.exports = {
         baseId: process.env.AIRTABLE_BASE, //required
         tableName: 'Teams', //required
         typeName: 'Teams', //required - needs to match template name
-        // route: '/events/:name' //optional
+        route: '/teams/:id' //optional
       }
     },
     {

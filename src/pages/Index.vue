@@ -1,5 +1,5 @@
 <template>
-  <Layout>
+  <main>
     <!-- Navigation Mobile type 1 -->
 
     <a href="#" class="open_menu bg-light radius_full"><i class="fas fa-bars lh-40"></i></a>
@@ -7,9 +7,11 @@
       <a href="#" class="close_menu color-white"><i class="fas fa-times"></i></a>
       <div class="px-40 pt-60 pb-60 inner">
         <div class="f-18 logo color-white mb-30">{{ $static.metaData.siteName }}</div>
-          <div><a href="#" class="f-heading f-15 link color-white mb-20">Home</a></div>
-          <div><a href="#" class="f-heading f-15 link color-white mb-20">Teams</a></div>
-          <div><a href="#" class="f-heading f-15 link color-white mb-20">Games</a></div>
+          <div><g-link class="f-heading f-15 link color-white mb-20" to="/">首頁</g-link></div>
+          <div><g-link class="f-heading f-15 link color-white mb-20" to="/about">關於</g-link></div>
+          <div><g-link class="f-heading f-15 link color-white mb-20" to="/teams">隊伍</g-link></div>
+          <div><g-link class="f-heading f-15 link color-white mb-20" to="/games">比賽</g-link></div>
+
           <!-- <div><a href="#" class="link color-white op-3 mb-15">Help</a></div>
           <div><a href="#" class="link color-white op-3 mb-15">F.A.Q.</a></div>
           <div><a href="#" class="link color-white op-3 mb-15">Support</a></div>
@@ -30,9 +32,7 @@
 
     <header class="pt-175 pb-105 bg-dark header_17">
 
-
       <!-- Header Menu 17 -->
-
       <nav class="header_menu_17 pt-30 pb-30 mt-35">
         <div class="container px-xl-0">
           <div class="row justify-content-center">
@@ -42,12 +42,12 @@
                   <div class="logo color-white">{{ $static.metaData.siteName }}</div>
                 </div>
                 <div class="col-lg-6 d-flex justify-content-end align-items-center medium" data-aos-duration="300" data-aos="zoom-in" data-aos-delay="600">
-                  <a href="#" class="mx-20 link color-white">Tour</a>
-                  <a href="#" class="mx-20 link color-white">Features</a>
-                  <a href="#" class="mx-20 link color-white">Pricing</a>
-                  <a href="#" class="mx-20 link color-white">Blog</a>
+                  <g-link class="mx-20 link color-white" to="/about">關於</g-link>
+                  <g-link class="mx-20 link color-white" to="/teams">隊伍</g-link>
+                  <!-- <a href="#" class="mx-20 link color-white">球員</a> -->
+                  <a href="#" class="mx-20 link color-white">比賽回顧</a>
                   <a href="#" class="mx-20 link color-white"><i class="fab fa-facebook-square"></i></a>
-                  <a href="#" class="ml-20 link color-white"><i class="fab fa-twitter"></i></a>
+                  <a href="#" class="ml-20 link color-white"><i class="fab fa-youtube"></i></a>
                 </div>
               </div>
             </div>
@@ -59,7 +59,7 @@
         <div class="row justify-content-center">
           <div class="col-md-6">
             <div class="row justify-content-center">
-              <div class="mb-30 text-center text-xl-left" data-aos-duration="300" data-aos="zoom-in" data-aos-delay="0">
+              <div class="mb-30 text-center" data-aos-duration="300" data-aos="zoom-in" data-aos-delay="0">
                 <h1 class="mb-3 logo d-block color-white logo_mobile">
                   <g-image class="img-fluid" src="~/assets/logo.png" />
                 </h1>
@@ -68,8 +68,12 @@
                 </div>
                 <div>
                   <div class="row justify-content-center" data-aos-duration="600" data-aos-delay="300">
-                    <div class="col-5"><a href="#" class="btn btn-block action-1">Teams</a></div>
-                    <div class="col-5"><a href="#" class="btn btn-block action-1">Games</a></div>
+                    <div class="col-5">
+                      <g-link class="btn btn-block action-1" to="/teams">全部球隊</g-link>
+                    </div>
+                    <div class="col-5">
+                      <g-link class="btn btn-block action-1" to="/games">比賽回顧</g-link>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -82,7 +86,7 @@
     <!-- Footer 7 -->
 
 
-  </Layout>
+  </main>
 </template>
 
 <script>
