@@ -19,6 +19,7 @@ function addStyleResource (rule) {
 
 module.exports = {
   siteName: 'RUTEN BASKETBALL CLUB',
+  icon: './src/assets/favicon.png',
   plugins: [
     {
       use: '@gridsome/source-airtable',
