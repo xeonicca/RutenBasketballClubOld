@@ -1,8 +1,7 @@
 <template>
   <layout>
-    <div class="container px-xl-0">
+    <div class="bg-dark container px-xl-0">
       <div class="row">
-        <div class="col-xl-1"></div>
         <div class="col-12">
           <h2 class="color-white mb-35 small">How to contribute</h2>
           <p class="f-18 color-white">使用公司email申請airtable的編輯權限</p>
