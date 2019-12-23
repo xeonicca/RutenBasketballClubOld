@@ -46,6 +46,11 @@ import Layout from '~/layouts/Default.vue'
 export default {
   components: {
     Layout
+  },
+  metaInfo() {
+    return {
+      title: this.$page.team.name,
+    }
   }
 }
 </script>
