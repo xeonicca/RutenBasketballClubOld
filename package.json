@@ -5,7 +5,8 @@
     "build": "gridsome build",
     "develop": "gridsome develop",
     "explore": "gridsome explore",
-    "deploy": "surge ./dist ruten-basketball.surge.sh"
+    "deploy": "yarn surge ./dist ruten-basketball.surge.sh",
+    "test": "echo test"
   },
   "dependencies": {
     "@gridsome/source-airtable": "^0.1.4",

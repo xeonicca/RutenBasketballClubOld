@@ -53,14 +53,8 @@ export default {
   components: {
     Layout
   },
-  data() {
-    return {
-      hrColors: [
-        "#FCB400", // Airtable Yellow
-        "#18BFFF", // Airtable Blue
-        "#D92654" // Airtable Red
-      ]
-    }
-  },
+  metaInfo: {
+    title: 'Teams',
+  }
 }
 </script>

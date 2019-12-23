@@ -44,8 +44,8 @@
                 <div class="col-lg-6 d-flex justify-content-end align-items-center medium" data-aos-duration="300" data-aos="zoom-in" data-aos-delay="600">
                   <g-link class="mx-20 link color-white" to="/about">關於</g-link>
                   <g-link class="mx-20 link color-white" to="/teams">隊伍</g-link>
+                  <g-link class="mx-20 link color-white" to="/games">比賽回顧</g-link>
                   <!-- <a href="#" class="mx-20 link color-white">球員</a> -->
-                  <a href="#" class="mx-20 link color-white">比賽回顧</a>
                   <a href="#" class="mx-20 link color-white"><i class="fab fa-facebook-square"></i></a>
                   <a href="#" class="ml-20 link color-white"><i class="fab fa-youtube"></i></a>
                 </div>
@@ -92,7 +92,7 @@
 <script>
 export default {
   metaInfo: {
-    title: 'RUTEN BASKETBALL CLUB'
+    title: '露天籃球社'
   },
 
   mounted() {
