@@ -27,6 +27,11 @@ export default function (Vue, { router, head, isClient }) {
 
   head.link.push({
     rel: 'stylesheet',
+    href: 'https://fonts.googleapis.com/css?family=Oswald'
+  })
+
+  head.link.push({
+    rel: 'stylesheet',
     href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css'
   })
 

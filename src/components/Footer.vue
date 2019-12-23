@@ -8,7 +8,7 @@
         <div class="mt-10 mb-10 my-xl-0 col-xl-4 lh-40">
           <g-link class="f-14 text-uppercase sp-20 link color-white mr-15" to="/about">關於</g-link>
           <g-link class="f-14 text-uppercase sp-20 link color-white mr-15" to="/teams">隊伍</g-link>
-          <g-link class="f-14 text-uppercase sp-20 link color-white mr-15" to="/teams">比賽回顧</g-link>
+          <g-link class="f-14 text-uppercase sp-20 link color-white mr-15" to="/games">比賽回顧</g-link>
         </div>
         <div class="col-lg-3 text-xl-right socials">
           <a href="#" class="mx-15 w-40 btn sm border-transparent-white px-0"><i class="fab fa-facebook-f"></i></a>

@@ -1,14 +1,14 @@
 export default [
   {
-    path: "/about",
-    component: () => import(/* webpackChunkName: "page--src-pages-about-vue" */ "D:\\RutenBasketballClub\\src\\pages\\About.vue")
-  },
-  {
     path: "/games",
     component: () => import(/* webpackChunkName: "page--src-pages-games-vue" */ "D:\\RutenBasketballClub\\src\\pages\\Games.vue"),
     meta: {
       data: [1,"0f16cafe"]
     }
+  },
+  {
+    path: "/about",
+    component: () => import(/* webpackChunkName: "page--src-pages-about-vue" */ "D:\\RutenBasketballClub\\src\\pages\\About.vue")
   },
   {
     name: "home",
@@ -19,7 +19,7 @@ export default [
     path: "/teams",
     component: () => import(/* webpackChunkName: "page--src-pages-teams-vue" */ "D:\\RutenBasketballClub\\src\\pages\\Teams.vue"),
     meta: {
-      data: [1,"594692c6"]
+      data: [1,"85cb2e98"]
     }
   },
   {

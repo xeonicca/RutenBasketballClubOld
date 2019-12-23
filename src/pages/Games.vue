@@ -20,10 +20,10 @@
                     <tr v-for="(edge, index) in $page.games.edges">
                       <td>{{edge.node.datePlayed}}</td>
                       <td class="text-center">
-                        <g-link class="semibold" :to="$options.filters.teamPath(edge.node.homeTeam, $page.teams)">{{edge.node.homeTeam | teamName($page.teams) }}</g-link><br><span class="f-22 color-dribbble bold">{{edge.node.homeScore}}</span>
+                        <g-link class="semibold" :to="$options.filters.teamPath(edge.node.homeTeam, $page.teams)">{{edge.node.homeTeam | teamName($page.teams) }}</g-link><br><span class="f-heading f-40 color-dribbble bold">{{edge.node.homeScore}}</span>
                       </td>
                       <td class="text-center">
-                        <g-link class="semibold" :to="$options.filters.teamPath(edge.node.awayTeam, $page.teams)">{{edge.node.awayTeam | teamName($page.teams) }}</g-link><br><span class="f-22 color-dribbble bold">{{edge.node.awayScore}}</span>
+                        <g-link class="semibold" :to="$options.filters.teamPath(edge.node.awayTeam, $page.teams)">{{edge.node.awayTeam | teamName($page.teams) }}</g-link><br><span class="f-heading f-40 color-dribbble bold">{{edge.node.awayScore}}</span>
                       </td>
                     </tr>
                   </tbody>
