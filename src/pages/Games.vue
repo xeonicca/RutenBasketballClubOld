@@ -89,6 +89,9 @@ export default {
 
       return t && t.node.path || ''
     }
+  },
+  metaInfo: {
+    title: 'Games',
   }
 }
 </script>

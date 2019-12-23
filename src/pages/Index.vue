@@ -91,9 +91,9 @@
 
 <script>
 export default {
-  metaInfo: {
-    title: 'RUTEN BASKETBALL CLUB'
-  },
+  // metaInfo: {
+  //   title: 'RUTEN BASKETBALL CLUB'
+  // },
 
   mounted() {
     window.$ = require('jquery')

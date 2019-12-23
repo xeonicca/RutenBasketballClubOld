@@ -62,5 +62,8 @@ export default {
       ]
     }
   },
+  metaInfo: {
+    title: 'Teams',
+  }
 }
 </script>

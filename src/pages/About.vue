@@ -29,6 +29,9 @@ export default {
       document.execCommand('copy');
       document.body.removeChild(el);
     }
+  },
+  metaInfo: {
+    title: 'About',
   }
 }
 </script>

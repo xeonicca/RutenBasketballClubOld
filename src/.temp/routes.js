@@ -1,5 +1,16 @@
 export default [
   {
+    path: "/about",
+    component: () => import(/* webpackChunkName: "page--src-pages-about-vue" */ "D:\\RutenBasketballClub\\src\\pages\\About.vue")
+  },
+  {
+    path: "/games",
+    component: () => import(/* webpackChunkName: "page--src-pages-games-vue" */ "D:\\RutenBasketballClub\\src\\pages\\Games.vue"),
+    meta: {
+      data: [1,"0f16cafe"]
+    }
+  },
+  {
     name: "home",
     path: "/",
     component: () => import(/* webpackChunkName: "page--src-pages-index-vue" */ "D:\\RutenBasketballClub\\src\\pages\\Index.vue")
@@ -9,17 +20,6 @@ export default [
     component: () => import(/* webpackChunkName: "page--src-pages-teams-vue" */ "D:\\RutenBasketballClub\\src\\pages\\Teams.vue"),
     meta: {
       data: [1,"594692c6"]
-    }
-  },
-  {
-    path: "/about",
-    component: () => import(/* webpackChunkName: "page--src-pages-about-vue" */ "D:\\RutenBasketballClub\\src\\pages\\About.vue")
-  },
-  {
-    path: "/games",
-    component: () => import(/* webpackChunkName: "page--src-pages-games-vue" */ "D:\\RutenBasketballClub\\src\\pages\\Games.vue"),
-    meta: {
-      data: [1,"0f16cafe"]
     }
   },
   {
