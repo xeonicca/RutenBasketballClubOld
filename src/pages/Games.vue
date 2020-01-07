@@ -1,33 +1,41 @@
 <template>
   <Layout>
-    <section class="pb-100 bg-dark showcase_5">
-      <div class="container px-xl-0">
-        <div class="row justify-content-center text-center color-white">
-
-          <div class="col-xl-10">
-            <h2 class="mb-10 small text-center">比賽結果</h2>
-            <div class="pt-40 px-md-60 px-15 pt-60 table-responsive-shadow bg-light">
-              <div class="table-responsive-xl">
-                <table class="table table-borderless table-striped m-0">
-                  <thead>
-                    <tr class="color-heading f-14 text-uppercase sp-20">
-                      <th scope="col" class="semibold">日期</th>
-                      <th scope="col" class="semibold">隊伍1</th>
-                      <th scope="col" class="semibold">隊伍2</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr v-for="(edge, index) in $page.games.edges">
-                      <td>{{edge.node.datePlayed}}</td>
-                      <td class="text-center">
-                        <g-link class="semibold" :to="$options.filters.teamPath(edge.node.firstTeam, $page.teams)">{{edge.node.firstTeam | teamName($page.teams) }}</g-link><br><span class="f-heading f-40 color-dribbble bold">{{edge.node.firstTeamScore}}</span>
-                      </td>
-                      <td class="text-center">
-                        <g-link class="semibold" :to="$options.filters.teamPath(edge.node.secondTeam, $page.teams)">{{edge.node.secondTeam | teamName($page.teams) }}</g-link><br><span class="f-heading f-40 color-dribbble bold">{{edge.node.secondTeamScore}}</span>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
+    <section class="bg-dark pt-100 pb-100 showcase_5 content_20">
+      <div class="container px-xl-0 color-white">
+        <div class="row justify-content-center">
+          <div class="col-xl-10 col-lg-11">
+            <h2 class="small">比賽結果</h2>
+            <div class="row">
+              <div class="mt-25 col-12 inner">
+                <div v-for="games, date, i in gameRecordsByDate" class="pb-50 relative block">
+                  <div class="content_20_line"></div>
+                  <div
+                    class="bg-gray color-heading radius_full w-40 h-40 f-18 medium lh-40 text-center number"
+                  >{{ i+1 }}</div>
+                  <div class="ml-70 pt-10 block_inner">
+                    <div class="f-heading f-18 medium">{{ date }}</div>
+                    <div class="mt-20 color-heading text-adaptive">
+                      <div class="row">
+                        <div v-for="game, i in games" class="col-3">
+                          <h4 class="color-white f-18 mb-10 font-weight-normal">Game {{ game.id }} {{ game.memo }}</h4>
+                          <table class="bg-light table table-bordered text-center radius5">
+                            <tr>
+                              <th class="f-18 f-heading bg-gray color-heading">{{ game.firstTeam | teamName($page.teams) }}</th>
+                              <th class="f-18 f-heading bg-gray color-heading">{{ game.secondTeam | teamName($page.teams) }}</th>
+                            </tr>
+                            <tr>
+                              <td><span class="f-heading f-30 bold color-heading" :class="{'color-dribbble':game.winnerTeam[0] === game.firstTeam[0]}">{{ game.firstTeamScore }}</span></td>
+                              <td><span class="f-heading f-30 bold color-heading" :class="{'color-dribbble':game.winnerTeam[0] === game.secondTeam[0]}">{{ game.secondTeamScore }}</span></td>
+                            </tr>
+                            <tr>
+                              <td colspan="2"><a class="d-block" target="_blank" :href="game.youtubeLink"><i class="color-red fab fa-youtube"></i></a></td>
+                            </tr>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -38,15 +46,18 @@
 </template>
 <page-query>
 query {
-  games: allGames(sort: { by: "datePlayed", order: DESC }) {
+  games: allGames(sort: [{ by: "datePlayed", order: DESC }, { by: "id", order: ASC }]) {
     edges {
-      node{
+      node {
+        id
         datePlayed
         firstTeam
         secondTeam
         firstTeamScore
         secondTeamScore
         winnerTeam
+        youtubeLink
+        memo
       }
     }
   }
@@ -67,9 +78,20 @@ query {
 import Layout from '~/layouts/Default.vue'
 export default {
   components: {
-    Layout
+    Layout,
   },
-
+  computed: {
+    gameRecordsByDate() {
+      return this.$page.games.edges.reduce((all, v) => {
+        let thisDate = v.node.datePlayed
+        if (thisDate && !all[thisDate]) {
+          all[thisDate] = []
+        }
+        all[thisDate].push(v.node)
+        return all
+      }, {})
+    },
+  },
   filters: {
     teamName(teamList, teams) {
       let [id] = teamList
@@ -77,7 +99,7 @@ export default {
         return v.node.id === id
       })
 
-      return t && t.node.name || ''
+      return (t && t.node.name) || ''
     },
 
     teamPath(teamList, teams) {
@@ -86,11 +108,11 @@ export default {
         return v.node.id === id
       })
 
-      return t && t.node.path || ''
-    }
+      return (t && t.node.path) || ''
+    },
   },
   metaInfo: {
     title: 'Games',
-  }
+  },
 }
 </script>
