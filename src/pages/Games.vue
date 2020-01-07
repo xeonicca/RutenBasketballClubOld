@@ -20,10 +20,10 @@
                     <tr v-for="(edge, index) in $page.games.edges">
                       <td>{{edge.node.datePlayed}}</td>
                       <td class="text-center">
-                        <g-link class="semibold" :to="$options.filters.teamPath(edge.node.homeTeam, $page.teams)">{{edge.node.homeTeam | teamName($page.teams) }}</g-link><br><span class="f-heading f-40 color-dribbble bold">{{edge.node.homeScore}}</span>
+                        <g-link class="semibold" :to="$options.filters.teamPath(edge.node.firstTeam, $page.teams)">{{edge.node.firstTeam | teamName($page.teams) }}</g-link><br><span class="f-heading f-40 color-dribbble bold">{{edge.node.firstTeamScore}}</span>
                       </td>
                       <td class="text-center">
-                        <g-link class="semibold" :to="$options.filters.teamPath(edge.node.awayTeam, $page.teams)">{{edge.node.awayTeam | teamName($page.teams) }}</g-link><br><span class="f-heading f-40 color-dribbble bold">{{edge.node.awayScore}}</span>
+                        <g-link class="semibold" :to="$options.filters.teamPath(edge.node.secondTeam, $page.teams)">{{edge.node.secondTeam | teamName($page.teams) }}</g-link><br><span class="f-heading f-40 color-dribbble bold">{{edge.node.secondTeamScore}}</span>
                       </td>
                     </tr>
                   </tbody>
@@ -42,12 +42,11 @@ query {
     edges {
       node{
         datePlayed
-        homeTeam
-        awayTeam
-        homeScore
-        awayScore
-        homeWon
-        awayWon
+        firstTeam
+        secondTeam
+        firstTeamScore
+        secondTeamScore
+        winnerTeam
       }
     }
   }

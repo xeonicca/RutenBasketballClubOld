@@ -8,7 +8,7 @@
             <img class="radius10 noradius_bottom w-full" :src="`/teams/${$page.team.shortName}.png`" />
             <div class="px-30 pt-20 pb-30 bg-white radius10 noradius_top inner">
               <div class="mb-10 f-22 bold title">{{ $page.team.name }}</div>
-              <div class="mb-10 f-18 semibold">{{ $page.team.totalGamesWon }}勝</div>
+              <div class="mb-10 f-18 semibold">{{ $page.team.ofWonGames }}勝</div>
               <div class="color-heading text-adaptive">{{ $page.team.desc }}</div>
             </div>
           </div>
@@ -63,7 +63,7 @@ query Team ($id: String!) {
     shortName
     players
     captain
-    totalGamesWon
+    ofWonGames
     desc
   }
 

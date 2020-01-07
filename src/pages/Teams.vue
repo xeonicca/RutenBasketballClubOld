@@ -40,6 +40,7 @@ query Teams {
         desc
         shortName
         ofPlayers
+        ofWonGames
         path
       }
     }
