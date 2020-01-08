@@ -16,7 +16,7 @@
                     <div class="f-heading f-18 medium">{{ date }}</div>
                     <div class="mt-20 color-heading text-adaptive">
                       <div class="row">
-                        <div v-for="game, i in games" class="col-3">
+                        <div v-for="game, i in games" class="col-12 col-sm-6 col-md-4 col-lg-3">
                           <h4 class="color-white f-18 mb-10 font-weight-normal">Game {{ game.id }} {{ game.memo }}</h4>
                           <table class="bg-light table table-bordered text-center radius5">
                             <tr>
