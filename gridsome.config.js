@@ -59,6 +59,33 @@ module.exports = {
         typeName: 'Games', //required - needs to match template name
         // route: '/events/:name' //optional
       }
+    },
+    {
+      use: 'gridsome-plugin-pwa',
+      options: {
+        title: 'RUTEN BASKETBALL CLUB',
+        startUrl: '/',
+        display: 'standalone',
+        statusBarStyle: 'default',
+        manifestPath: 'manifest.json',
+        serviceWorkerPath: 'service-worker.js',
+        cachedFileTypes: 'js,json,css,html,png,jpg,jpeg,svg',
+        shortName: 'RUTEN BASKETBALL',
+        themeColor: '#0b409c',
+        backgroundColor: '#ffffff',
+        icon: [{
+          "src": "https://www.ruten.com.tw/images/mobile/shortcut_icon_192.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        },
+        {
+          "src": "https://www.ruten.com.tw/images/mobile/shortcut_icon_180.png",
+          "sizes": "180x180",
+          "type": "image/png"
+        }], // must be provided
+        msTileImage: '',
+        msTileColor: '#0b409c'
+      }
     }
   ],
   chainWebpack (config) {

@@ -24,11 +24,11 @@
                               <th class="f-18 f-heading bg-gray color-heading">{{ game.secondTeam | teamName($page.teams) }}</th>
                             </tr>
                             <tr>
-                              <td><span class="f-heading f-30 bold color-heading" :class="{'color-dribbble':game.winnerTeam[0] === game.firstTeam[0]}">{{ game.firstTeamScore }}</span></td>
-                              <td><span class="f-heading f-30 bold color-heading" :class="{'color-dribbble':game.winnerTeam[0] === game.secondTeam[0]}">{{ game.secondTeamScore }}</span></td>
+                              <td><span class="f-heading f-30 bold color-heading" :class="{'color-dribbble':game.winnerTeam[0] === game.firstTeam[0]}">{{ game.firstTeamScore || '?' }}</span></td>
+                              <td><span class="f-heading f-30 bold color-heading" :class="{'color-dribbble':game.winnerTeam[0] === game.secondTeam[0]}">{{ game.secondTeamScore || '?' }}</span></td>
                             </tr>
                             <tr>
-                              <td colspan="2"><a class="d-block" target="_blank" :href="game.youtubeLink"><i class="color-red fab fa-youtube"></i></a></td>
+                              <td colspan="2"><a class="d-block" target="_blank" :href="game.youtubeLink"><i class="color-red fab fa-youtube"></i>&nbsp;<span v-if="game.winnerTeam.length">{{ game.winnerTeam | teamName($page.teams) }}勝</span></a></td>
                             </tr>
                           </table>
                         </div>
