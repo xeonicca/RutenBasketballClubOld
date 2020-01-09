@@ -46,8 +46,8 @@
                   <g-link class="mx-20 link color-white" to="/teams">隊伍</g-link>
                   <g-link class="mx-20 link color-white" to="/games">比賽回顧</g-link>
                   <!-- <a href="#" class="mx-20 link color-white">球員</a> -->
-                  <a href="#" class="mx-20 link color-white"><i class="fab fa-facebook-square"></i></a>
-                  <a href="#" class="ml-20 link color-white"><i class="fab fa-youtube"></i></a>
+                  <!-- <a href="#" class="mx-20 link color-white"><i class="fab fa-facebook-square"></i></a> -->
+                  <a href="https://www.youtube.com/channel/UCab1y2Z0_EnrBANFZd7FsOw" class="ml-20 link color-white" target="_blank"><i class="fab fa-youtube"></i></a>
                 </div>
               </div>
             </div>
